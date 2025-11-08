@@ -1,5 +1,6 @@
 :root {
-  --accent: #ff6600;
+  --accent: #56BCF9;
+  --accent-hover: #3ba3e3;
   --text: #333;
   --bg: #f8f8f8;
 }
@@ -23,6 +24,7 @@ header nav a {
   color: white;
   margin: 0 1rem;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 header nav a:hover {
@@ -47,6 +49,11 @@ header nav a:hover {
   border-radius: 4px;
   display: inline-block;
   margin-top: 1rem;
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background: var(--accent-hover);
 }
 
 section {
@@ -76,10 +83,11 @@ button {
   padding: 0.8rem;
   border-radius: 4px;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
 
 button:hover {
-  background: #e65a00;
+  background: var(--accent-hover);
 }
 
 footer {
