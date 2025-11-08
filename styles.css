@@ -1,0 +1,91 @@
+:root {
+  --accent: #ff6600;
+  --text: #333;
+  --bg: #f8f8f8;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.6;
+}
+
+header {
+  background: #222;
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+header nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: var(--accent);
+}
+
+#hero {
+  padding: 4rem 2rem;
+  background: white;
+  text-align: center;
+}
+
+#hero h2 {
+  margin-top: 0;
+}
+
+.button {
+  background: var(--accent);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 1rem auto;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e65a00;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background: #222;
+  color: white;
+  margin-top: 2rem;
+}
