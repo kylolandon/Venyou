@@ -1,54 +1,57 @@
-/* ====== Global Styles ====== */
-body {
-  font-family: Arial, Helvetica, sans-serif;
+/* General Reset */
+body, h1, h2, h3, p, ul {
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
   line-height: 1.6;
-  scroll-behavior: smooth;
+  background-color: #f9f9f9;
 }
 
-h1, h2, h3 {
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-a {
-  text-decoration: none;
-  color: #56BCF9;
-}
-
-/* ====== Header ====== */
+/* Header */
 header {
   background-color: #111;
-  padding: 15px 30px;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  padding: 1rem 3rem;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  width: 100%;
+  z-index: 10;
 }
 
-header h1 {
-  color: #fff;
-  font-size: 1.6rem;
-}
-
-nav a {
-  margin: 0 15px;
-  color: #fff;
+header .logo {
+  font-size: 1.3rem;
   font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.8rem;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
-nav a:hover {
+header nav a:hover {
   color: #56BCF9;
 }
 
-/* ====== Hero Banner ====== */
+/* Main layout */
+main {
+  margin-top: 80px;
+}
+
+/* Hero Section */
 .hero-banner {
   position: relative;
-  background-image: url('images/hero-placeholder.jpg');
+  background-image: url('images/hero-placeholder.jpg'); /* Replace with your hero image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -84,7 +87,8 @@ nav a:hover {
   margin-bottom: 30px;
 }
 
-.button {
+/* Buttons */
+.button, button {
   background-color: #56BCF9;
   color: white;
   border: none;
@@ -95,167 +99,125 @@ nav a:hover {
   transition: background-color 0.3s ease;
 }
 
-.button:hover {
+.button:hover, button:hover {
   background-color: #3ea9e8;
 }
 
-/* ====== About Section ====== */
-#about {
-  padding: 80px 20px;
-  background-color: #f7f7f7;
+/* Section styles */
+section {
+  padding: 80px 10%;
   text-align: center;
 }
 
-.about-content {
-  max-width: 1000px;
-  margin: 0 auto;
+section h2 {
+  color: #111;
+  margin-bottom: 25px;
+  font-size: 2rem;
 }
 
-.about-content img {
-  width: 100%;
+section p {
   max-width: 800px;
-  border-radius: 8px;
-  margin-top: 30px;
+  margin: 0 auto;
+  color: #555;
 }
 
-/* ====== Services Section ====== */
-#services {
-  padding: 80px 20px;
-  text-align: center;
-}
-
+/* Service areas */
 .service {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 50px;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 40px;
 }
 
-.service img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
-  margin: 20px;
-}
-
-.service-text {
-  max-width: 500px;
-  text-align: left;
-}
-
-.service-text h3 {
+.service h3 {
   color: #56BCF9;
+  margin-bottom: 10px;
 }
 
-/* ====== Banner Section (What Sets Us Apart) ====== */
-.banner-section {
+.service ul {
+  list-style: none;
+}
+
+.service ul li {
+  margin-bottom: 8px;
+}
+
+/* Image Banner (What Sets Us Apart) */
+.image-banner {
   position: relative;
-  background-image: url('images/difference-placeholder.jpg');
+  background-image: url('images/what-sets-us-apart.jpg'); /* Replace with your image */
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   color: white;
+  padding: 100px 10%;
   text-align: center;
-  padding: 120px 20px;
 }
 
-.banner-section::before {
+.image-banner::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.55);
 }
 
-.banner-overlay {
+.image-banner .overlay {
   position: relative;
   z-index: 1;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.banner-overlay h2 {
-  font-size: 2.5rem;
+.image-banner h2 {
+  font-size: 2.2rem;
   margin-bottom: 25px;
 }
 
-.banner-overlay ul {
+.image-banner ul {
   list-style: none;
   padding: 0;
-  font-size: 1.2rem;
-  line-height: 1.8;
 }
 
-.banner-overlay li::before {
-  content: "• ";
-  color: #56BCF9;
+.image-banner ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
 }
 
-/* ====== Contact Section ====== */
-#contact {
-  padding: 80px 20px;
-  text-align: center;
-  background-color: #f7f7f7;
-}
-
+/* Contact Section */
 #contact form {
-  max-width: 600px;
-  margin: 0 auto;
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-#contact input,
-#contact textarea {
-  padding: 12px;
-  margin: 10px 0;
+#contact input, #contact textarea {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 15px;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-#contact button {
-  background-color: #56BCF9;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 1rem;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-#contact button:hover {
-  background-color: #3ea9e8;
-}
-
-/* ====== Footer ====== */
+/* Footer */
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 20px;
   background-color: #111;
-  color: #fff;
+  color: white;
   font-size: 0.9rem;
+  margin-top: 40px;
 }
 
-/* ====== Responsive Design ====== */
+/* Responsive tweaks */
 @media (max-width: 768px) {
-  .hero-overlay h2 {
-    font-size: 2rem;
-  }
-
-  .service {
+  header {
     flex-direction: column;
-  }
-
-  .service-text {
     text-align: center;
   }
 
-  .banner-overlay h2 {
-    font-size: 2rem;
+  header nav a {
+    margin: 10px;
+  }
+
+  .hero-overlay h2 {
+    font-size: 2.2rem;
   }
 }
