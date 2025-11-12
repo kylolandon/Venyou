@@ -14,17 +14,15 @@
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
+      <a href="#difference">What Sets Us Apart</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
     <!-- Hero Section -->
-    <section id="hero">
-      <div class="hero-image">
-        <img src="images/hero-placeholder.jpg" alt="Hero Image" />
-      </div>
-      <div class="hero-text">
+    <section id="hero" class="hero-banner">
+      <div class="hero-overlay">
         <h2>Setting the Stage for Your Success</h2>
         <p>Custom services and technology built for you.</p>
         <a href="#contact" class="button">Get in Touch</a>
@@ -35,12 +33,8 @@
     <section id="about">
       <h2>About Us</h2>
       <div class="about-content">
-        <div class="about-text">
-          <p>We empower organizations and businesses to thrive in the facilities they occupy through dependable, forward-thinking management and technology solutions. Our goal is to simplify operations, ensure reliability, and enhance how your space can function and perform.</p>
-        </div>
-        <div class="about-image">
-          <img src="images/about-placeholder.jpg" alt="About Us Image" />
-        </div>
+        <p>We empower organizations and businesses to thrive in the facilities they occupy through dependable, forward-thinking management and technology solutions. Our goal is to simplify operations, ensure reliability, and enhance how your space can function and perform.</p>
+        <img src="images/about-placeholder.jpg" alt="About Venyou Solutions" />
       </div>
     </section>
 
@@ -49,9 +43,7 @@
       <h2>Core Service Areas</h2>
 
       <div class="service">
-        <div class="service-image">
-          <img src="images/facility-placeholder.jpg" alt="Facility Management Image" />
-        </div>
+        <img src="images/facility-placeholder.jpg" alt="Facility Management" />
         <div class="service-text">
           <h3>Facility Management Services</h3>
           <ul>
@@ -63,32 +55,27 @@
       </div>
 
       <div class="service">
-        <div class="service-image">
-          <img src="images/avl-placeholder.jpg" alt="AVL Solutions Image" />
-        </div>
+        <img src="images/avl-placeholder.jpg" alt="AVL Solutions" />
         <div class="service-text">
           <h3>AVL (Audio, Visual & Lighting) Solutions</h3>
           <ul>
-            <li>Immersive sound, video, projection</li>
+            <li>Immersive sound, video, and projection</li>
             <li>Stage and architectural lighting integration</li>
-            <li>Ongoing support, maintenance, training</li>
+            <li>Ongoing support, maintenance, and training</li>
           </ul>
         </div>
       </div>
     </section>
 
     <!-- What Sets Us Apart Section -->
-    <section id="difference">
-      <h2>What Sets Us Apart</h2>
-      <div class="difference-content">
+    <section id="difference" class="banner-section">
+      <div class="banner-overlay">
+        <h2>What Sets Us Apart</h2>
         <ul>
           <li>Local and dependable service coverage</li>
           <li>Experienced in facility and AVL systems</li>
           <li>Unified, tailored support for your facility and systems</li>
         </ul>
-        <div class="difference-image">
-          <img src="images/difference-placeholder.jpg" alt="Our Difference Image" />
-        </div>
       </div>
     </section>
 
@@ -98,7 +85,7 @@
       <p>We’d love to connect! Use the form below or email us directly at:</p>
       <p><a href="mailto:info@venyousolutions.com">info@venyousolutions.com</a></p>
 
-      <!-- Formspree example (no backend needed) -->
+      <!-- Formspree form (no backend required) -->
       <form action="https://formspree.io/f/yourformid" method="POST">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
