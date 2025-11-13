@@ -1,4 +1,4 @@
-/* General Reset */
+/* Reset & Basics */
 body, h1, h2, h3, p, ul {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ body {
   background-color: #f9f9f9;
 }
 
-/* Smooth scrolling for anchor links */
+/* Smooth scrolling for anchors */
 html {
   scroll-behavior: smooth;
 }
@@ -29,20 +29,24 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  height: 70px; /* consistent height for alignment */
+  height: 70px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 header .logo {
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 1.4rem;
+  font-weight: 600;
   letter-spacing: 0.5px;
-  line-height: 1; /* ensures vertical centering */
+  line-height: 1;
+}
+
+header .logo .highlight {
+  color: #56BCF9;
 }
 
 header nav {
   display: flex;
-  align-items: center; /* keeps nav links centered vertically */
+  align-items: center;
   gap: 2rem;
 }
 
@@ -57,15 +61,15 @@ header nav a:hover {
   color: #56BCF9;
 }
 
-/* Main layout */
+/* Layout adjustments */
 main {
-  margin-top: 80px;
+  margin-top: 70px;
 }
 
 /* Hero Section */
 .hero-banner {
   position: relative;
-  background-image: url('images/hero-placeholder.jpg'); /* Replace with your hero image */
+  background-image: url('images/hero-placeholder.jpg'); /* Replace with your image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -117,7 +121,7 @@ main {
   background-color: #3ea9e8;
 }
 
-/* Section styles */
+/* General Sections */
 section {
   padding: 80px 10%;
   text-align: center;
@@ -220,15 +224,18 @@ footer {
   margin-top: 40px;
 }
 
-/* Responsive tweaks */
+/* Responsive */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     text-align: center;
+    height: auto;
+    padding: 1rem;
   }
 
-  header nav a {
-    margin: 10px;
+  header nav {
+    gap: 1rem;
+    margin-top: 10px;
   }
 
   .hero-overlay h2 {
