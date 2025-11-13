@@ -11,6 +11,11 @@ body {
   background-color: #f9f9f9;
 }
 
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Header */
 header {
   background-color: #0a0a0a; /* solid dark background */
