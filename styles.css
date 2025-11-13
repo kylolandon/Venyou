@@ -18,12 +18,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 0.8rem 3rem;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
+  height: 70px; /* consistent height for alignment */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -31,16 +32,18 @@ header .logo {
   font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: 0.5px;
+  line-height: 1; /* ensures vertical centering */
 }
 
 header nav {
-  background: transparent;
+  display: flex;
+  align-items: center; /* keeps nav links centered vertically */
+  gap: 2rem;
 }
 
 header nav a {
   color: white;
   text-decoration: none;
-  margin-left: 1.8rem;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -48,6 +51,7 @@ header nav a {
 header nav a:hover {
   color: #56BCF9;
 }
+
 /* Main layout */
 main {
   margin-top: 80px;
