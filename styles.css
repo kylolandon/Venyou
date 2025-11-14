@@ -4,7 +4,7 @@ body, h1, h2, h3, p, ul {
   padding: 0;
 }
 
-html { 
+html {
   scroll-behavior: smooth; /* smooth scrolling */
 }
 
@@ -12,7 +12,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
   line-height: 1.6;
-  background-color: #f9f9f9; /* original light grey */
+  background-color: #f9f9f9; /* light grey background */
 }
 
 /* Header */
@@ -37,7 +37,6 @@ header .logo {
   font-weight: 600;
   letter-spacing: 0.5px;
   line-height: 1;
-  color: white;
 }
 
 header .logo .highlight {
@@ -48,7 +47,7 @@ header .logo .highlight {
 header nav {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1.5rem;
   flex-wrap: nowrap;
 }
 
@@ -82,10 +81,8 @@ main {
   justify-content: center;
   text-align: center;
   color: white;
-  overflow: hidden;
 }
 
-/* Dark overlay on hero only */
 .hero-banner::before {
   content: "";
   position: absolute;
@@ -96,16 +93,15 @@ main {
 
 .hero-overlay {
   position: relative;
-  z-index: 1; /* sits above overlay */
+  z-index: 1;
   padding: 0 20px;
   max-width: 800px;
-  color: white; /* ensure white text */
+  color: white;
 }
 
 .hero-overlay h2 {
   font-size: 3rem;
   margin-bottom: 15px;
-  color: white;
 }
 
 .hero-overlay p {
@@ -147,9 +143,25 @@ section p {
   color: #555;
 }
 
-/* Service areas */
-.service {
+/* Core Services Grid */
+.services-grid {
+  display: flex;
+  gap: 30px;
   margin-top: 40px;
+}
+
+.service {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.service-img-box img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 12px;
 }
 
 .service h3 {
@@ -159,8 +171,7 @@ section p {
 
 .service ul {
   list-style: none;
-  margin-top: 10px;
-  padding-left: 0;
+  padding: 0;
 }
 
 .service ul li {
@@ -170,13 +181,12 @@ section p {
 /* Image Banner (What Sets Us Apart) */
 .image-banner {
   position: relative;
-  background-image: url('images/what-sets-us-apart.jpg'); /* replace with your image */
+  background-image: url('images/what-sets-us-apart.jpg'); /* Replace with your image */
   background-size: cover;
   background-position: center;
   color: white;
   padding: 100px 10%;
   text-align: center;
-  overflow: hidden;
 }
 
 .image-banner::before {
@@ -242,27 +252,24 @@ footer {
   /* stack header elements and center them */
   header {
     padding: 0.8rem 1rem;
-  }
-
-  header .logo {
-    margin-bottom: 10px;
+    flex-direction: column;
     text-align: center;
+    height: auto;
   }
 
   header nav {
     display: flex;
-    flex-direction: column; /* stack links */
+    flex-direction: column;
     gap: 8px;
-    align-items: center;
+    margin-top: 8px;
     width: 100%;
+    align-items: center;
   }
 
   header nav a {
     display: block;
     margin: 0;
-    padding: 6px 0;
     font-size: 18px;
-    color: white;
   }
 
   .hero-overlay h2 {
@@ -273,8 +280,7 @@ footer {
     font-size: 1.1rem;
   }
 
-  /* Ensure main sections spacing is comfortable on small screens */
-  section {
-    padding: 60px 6%;
+  .services-grid {
+    flex-direction: column;
   }
 }
