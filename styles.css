@@ -12,7 +12,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
   line-height: 1.6;
-  background-color: #f9f9f9; /* light grey background */
+  background-color: #f9f9f9;
 }
 
 /* Header */
@@ -65,7 +65,7 @@ header nav a:hover {
 
 /* Layout adjustments */
 main {
-  margin-top: 70px; /* space for fixed header */
+  margin-top: 70px;
 }
 
 /* Hero Section */
@@ -75,19 +75,20 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 65vh; /* reduced height */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
+  filter: blur(3px); /* blurred hero image */
 }
 
 .hero-banner::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0,0,0,0.55);
   z-index: 0;
 }
 
@@ -148,10 +149,12 @@ section p {
   display: flex;
   gap: 30px;
   margin-top: 40px;
+  flex-wrap: wrap; /* prevent overflow */
 }
 
 .service {
   flex: 1;
+  min-width: 300px; /* ensures proper wrapping on smaller screens */
   background-color: #fff;
   padding: 20px;
   border-radius: 6px;
@@ -181,7 +184,7 @@ section p {
 /* Image Banner (What Sets Us Apart) */
 .image-banner {
   position: relative;
-  background-image: url('images/what-sets-us-apart.jpg'); /* Replace with your image */
+  background-image: url('images/what-sets-us-apart.jpg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -193,7 +196,7 @@ section p {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0,0,0,0.55);
   z-index: 0;
 }
 
@@ -248,8 +251,6 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-
-  /* stack header elements and center them */
   header {
     padding: 0.8rem 1rem;
     flex-direction: column;
@@ -259,17 +260,16 @@ footer {
 
   header nav {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: row; /* keep inline on mobile */
+    gap: 1rem;
+    justify-content: center;
     margin-top: 8px;
-    width: 100%;
-    align-items: center;
+    flex-wrap: wrap;
   }
 
   header nav a {
-    display: block;
-    margin: 0;
-    font-size: 18px;
+    display: inline-block;
+    font-size: 16px;
   }
 
   .hero-overlay h2 {
