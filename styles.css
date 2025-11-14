@@ -1,246 +1,218 @@
-/* Reset & Basics */
-body, h1, h2, h3, p, ul {
+/* GENERAL RESET */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-}
-
-/* Smooth scrolling for anchors */
-html {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #0f0f0f;
   scroll-behavior: smooth;
 }
 
-/* Header */
+h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* HEADER */
 header {
-  background-color: #0a0a0a; /* solid dark background */
-  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #111;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 3rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  padding: 18px 40px;
   z-index: 1000;
-  height: 70px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-header .logo {
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+.logo {
+  text-transform: none;
   line-height: 1;
 }
 
-header .logo .highlight {
+.ven {
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: -1px;
+}
+
+.you {
+  font-weight: 700;
+  font-size: 26px;
   color: #56BCF9;
 }
 
-header nav {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+.solutions {
+  font-size: 11px;
+  letter-spacing: 6px;
+  margin-top: 2px;
+  font-weight: 300;
+  color: #ccc;
 }
 
-header nav a {
-  color: white;
+nav a {
+  color: #fff;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  margin-left: 25px;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
-header nav a:hover {
+nav a:hover {
   color: #56BCF9;
 }
 
-/* Layout adjustments */
-main {
-  margin-top: 70px;
-}
-
-/* Hero Section */
+/* HERO BANNER */
 .hero-banner {
-  position: relative;
-  background-image: url('https://raw.githubusercontent.com/kylolandon/Venyou/refs/heads/main/F8890285-72E7-4A0C-9C2D-4A309AB59237.png'); /* Replace with your image */
+  background-image: url('images/hero.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  color: white;
-  filter: blur(6px)
-}
-
-.hero-banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  position: relative;
+  margin-top: 80px;
 }
 
 .hero-overlay {
-  position: relative;
-  z-index: 1;
-  padding: 0 20px;
-  max-width: 800px;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 40px;
+  border-radius: 12px;
 }
 
 .hero-overlay h2 {
-  font-size: 3rem;
+  font-size: 42px;
   margin-bottom: 15px;
-  color: white;
 }
 
 .hero-overlay p {
-  font-size: 1.3rem;
-  margin-bottom: 30px;
-}
-
-/* Buttons */
-.button, button {
-  background-color: #56BCF9;
-  color: white;
-  border: none;
-  padding: 12px 28px;
-  text-decoration: none;
-  font-size: 1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover, button:hover {
-  background-color: #3ea9e8;
-}
-
-/* General Sections */
-section {
-  padding: 80px 10%;
-  text-align: center;
-}
-
-section h2 {
-  color: #111;
+  font-size: 20px;
   margin-bottom: 25px;
-  font-size: 2rem;
 }
 
-section p {
+.button {
+  display: inline-block;
+  background: #56BCF9;
+  color: #000;
+  padding: 12px 26px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+/* ABOUT */
+#about p {
   max-width: 800px;
   margin: 0 auto;
-  color: #555;
 }
 
-/* Service areas */
-.service {
+/* SERVICES GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
   margin-top: 40px;
+}
+
+@media (min-width: 900px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+}
+
+.service {
+  background: #ffffff10;
+  padding: 30px;
+  border-radius: 12px;
+  backdrop-filter: blur(3px);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  opacity: 0.9;
 }
 
 .service h3 {
   color: #56BCF9;
-  margin-bottom: 10px;
-}
-
-.service ul {
-  list-style: none;
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 
 .service ul li {
   margin-bottom: 8px;
 }
 
-/* Image Banner (What Sets Us Apart) */
+/* IMAGE BANNER */
 .image-banner {
-  position: relative;
-  background-image: url('images/what-sets-us-apart.jpg'); /* Replace with your image */
+  background-image: url('images/difference.jpg');
   background-size: cover;
   background-position: center;
-  color: white;
-  padding: 100px 10%;
-  text-align: center;
-}
-
-.image-banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-}
-
-.image-banner .overlay {
+  padding: 120px 20px;
   position: relative;
-  z-index: 1;
-  max-width: 800px;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 40px;
+  max-width: 700px;
   margin: 0 auto;
+  border-radius: 12px;
 }
 
-.image-banner h2 {
-  font-size: 2.2rem;
-  margin-bottom: 25px;
-}
-
-.image-banner ul {
-  list-style: none;
-  padding: 0;
-}
-
-.image-banner ul li {
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-}
-
-/* Contact Section */
-#contact form {
-  margin-top: 25px;
+/* CONTACT SECTION */
+form {
+  max-width: 600px;
+  margin: 30px auto 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 15px;
 }
 
-#contact input, #contact textarea {
-  width: 100%;
-  max-width: 500px;
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+input, textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
 }
 
-/* Footer */
+button {
+  background: #56BCF9;
+  color: #000;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: #111;
-  color: white;
-  font-size: 0.9rem;
+  padding: 30px;
+  background: #0d0d0d;
   margin-top: 40px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-    height: auto;
-    padding: 1rem;
-  }
-
-  header nav {
-    gap: 1rem;
-    margin-top: 10px;
-  }
-
-  .hero-overlay h2 {
-    font-size: 2.2rem;
-  }
 }
