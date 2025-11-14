@@ -3,112 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>venyou solutions</title> 
+  <title>Venyou Solutions</title>
+  <meta name="description" content="Professional facility and AVL management services with a personal touch." />
   <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Facility Management & Production Services" />
-  <script>
-    // Smooth Scroll
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth"
-          });
-        });
-      });
-    });
-  </script>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
-
 <body>
   <!-- Header -->
-  <header class="header">
-    <div class="container header-inner">
-
-      <!-- LOGO -->
-      <div class="logo">
-        <span class="logo-ven">ven</span><span class="logo-you">you</span>
-        <span class="logo-solutions">SOLUTIONS</span>
-      </div>
-
-      <!-- NAV -->
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
+  <header>
+    <div class="logo">
+      Ven<span class="highlight">you</span> Solutions
     </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Facility Management & Production Services</h1>
-      <p>Supporting your space, your events, and your community.</p>
-    </div>
-  </section>
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-banner">
+      <div class="hero-overlay">
+        <h2>Facility & AVL Management</h2>
+        <p>Customized services built for your space</p>
+        <a href="#contact" class="button">Get in Touch</a>
+      </div>
+    </section>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="container">
+    <!-- About Us Section -->
+    <section id="about">
       <h2>About Us</h2>
-      <p>
-        venyou solutions partners with building owners, landlords, and organizations
-        to support day-to-day facility needs while providing modern production services
-        for events and rentals. We focus on reliability, simplicity, and elevating every space we support.
-      </p>
-    </div>
-  </section>
+      <p>Empowering businesses and organizations to thrive in the facilities they occupy through dependable, forward-thinking management and technology solutions. Our goal is to simplify operations, ensure reliability, and enhance how your space can function and perform.</p>
+    </section>
 
-  <!-- Services -->
-  <section id="services" class="section grey">
-    <div class="container">
+    <!-- Core Service Areas Section -->
+    <section id="services">
       <h2>Core Services</h2>
 
-      <div class="services-grid">
-
-        <!-- COLUMN 1 -->
-        <div class="service-box">
-          <div class="service-img-box">
-            <img src="https://via.placeholder.com/300x180?text=Facility+Image" alt="Facility Management">
-          </div>
-          <h3>Facility Management</h3>
-          <ul>
-            <li>Building oversight</li>
-            <li>Vendor coordination</li>
-            <li>Event rentals support</li>
-            <li>On-site assistance</li>
-          </ul>
-        </div>
-
-        <!-- COLUMN 2 -->
-        <div class="service-box">
-          <div class="service-img-box">
-            <img src="https://via.placeholder.com/300x180?text=AVL+Image" alt="Audio Visual Lighting">
-          </div>
-          <h3>Audio • Visual • Lighting</h3>
-          <ul>
-            <li>Event production</li>
-            <li>Stage & lighting design</li>
-            <li>Live sound operation</li>
-            <li>Equipment setup & support</li>
-          </ul>
-        </div>
-
+      <div class="service">
+        <h3>Facility Management</h3>
+        <ul>
+          <li>Smooth operations with proactive maintenance</li>
+          <li>Secure, connected facilities and vendors</li>
+          <li>Streamlined events and project oversight</li>
+        </ul>
       </div>
-    </div>
-  </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container">
+      <div class="service">
+        <h3>Audio, Visual & Lighting</h3>
+        <ul>
+          <li>Immersive sound, video, projection</li>
+          <li>Stage and architectural lighting integration</li>
+          <li>Ongoing support, maintenance, training</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- What Sets Us Apart Section -->
+    <section id="difference" class="image-banner">
+      <div class="overlay">
+        <h2>What Sets Us Apart</h2>
+        <ul>
+          <li>Local and dependable service coverage</li>
+          <li>Experienced in facility and AVL systems</li>
+          <li>Unified, tailored support for your facility and systems</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
       <h2>Contact</h2>
-      <p>Email: info@venyousolutions.com</p>
-    </div>
-  </section>
+      <p>We’d love to connect! Use the form below or email us directly at:</p>
+      <p><a href="mailto:info@venyousolutions.com">info@venyousolutions.com</a></p>
 
+      <form action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Venyou Solutions. All rights reserved.</p>
+  </footer>
 </body>
 </html>
