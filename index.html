@@ -1,110 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Venyou Solutions</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venyou Solutions</title>
 
-    <!-- Google Font: Archivo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Font: Archivo -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@200;300;400;700;900&display=swap" rel="stylesheet">
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="logo">Venyou Solutions</div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#process">Process</a>
-            <a href="#services">Services</a>
-            <a href="#contact" class="contact-btn">Contact</a>
-        </nav>
-    </header>
+<!-- =================== NAV =================== -->
+<header class="nav">
+  <div class="logo">Venyou<span>Solutions</span></div>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="gradient-bg"></div>
-        <h1 class="fade-in">Your number one trusted facility management & event operations partner.</h1>
-        <p class="fade-in delay-1">Reliable oversight, seamless event coordination, and professional AVL support — all from one dedicated partner.</p>
-        <a href="#contact" class="primary-btn fade-in delay-2">Let’s Talk About Your Space</a>
-    </section>
+  <nav class="nav-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact" class="cta">Contact</a>
+  </nav>
 
-    <!-- ABOUT -->
-    <section id="about" class="about section">
-        <div class="content fade-in">
-            <div class="text">
-                <h2>About Venyou Solutions</h2>
-                <p>
-                    We help building owners, landlords, and organizations run their spaces with confidence.
-                    From day-to-day facility oversight to event rentals and AVL production, Venyou Solutions
-                    blends operational management with technical expertise to support your entire space.
-                </p>
-            </div>
-            <img src="https://via.placeholder.com/500x350" class="rounded-img fade-in delay-1" />
-        </div>
-    </section>
+  <div class="mobile-menu-btn" id="menuBtn">
+    <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+  </div>
 
-    <!-- PROCESS -->
-    <section id="process" class="process section">
-        <h2 class="fade-in">Our Simple 3-Step Approach</h2>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-        <div class="process-cards">
-            <div class="card fade-in delay-1">
-                <h3>1. Visit & Review Your Space</h3>
-                <p>We meet onsite, evaluate how your building operates, and understand your workflow.</p>
-            </div>
+<!-- BG PARALLAX GRADIENT -->
+<div class="bg-gradient"></div>
 
-            <div class="card fade-in delay-2">
-                <h3>2. Identify Needs & Pain Points</h3>
-                <p>Together, we uncover gaps, inefficiencies, and opportunities for improvement.</p>
-            </div>
+<!-- =================== HERO =================== -->
+<section class="hero fade-in">
+  <h1 class="hero-title">Facility Management &<br> Production Services</h1>
+  <p class="hero-sub">Smart solutions for landlords, venues, and organizations.</p>
+</section>
 
-            <div class="card fade-in delay-3">
-                <h3>3. Build a Service Plan</h3>
-                <p>A clear, structured plan that saves you time and increases long-term revenue.</p>
-            </div>
-        </div>
-    </section>
+<!-- =================== ABOUT =================== -->
+<section id="about" class="section fade-in">
+  <h2 class="section-title">About Venyou Solutions</h2>
 
-    <!-- SERVICES -->
-    <section id="services" class="services section">
-        <h2 class="fade-in">Services We Provide</h2>
+  <p class="center-text">
+    We help landlords activate their spaces, streamline operations,
+    and improve how venues are rented, managed, and maintained.
+  </p>
 
-        <div class="service-list">
-            <div class="service fade-in delay-1">Facility Oversight & Operations</div>
-            <div class="service fade-in delay-2">Event Rental Coordination</div>
-            <div class="service fade-in delay-3">AVL Production Support</div>
-            <div class="service fade-in delay-4">Volunteer & Staff Tech Training</div>
-            <div class="service fade-in delay-5">Long-term Building Management</div>
-        </div>
-    </section>
+  <div class="image-row">
+    <div class="img-box"></div>
+    <div class="img-box"></div>
+    <div class="img-box"></div>
+  </div>
+</section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact section">
-        <div class="contact-content fade-in">
-            <div class="contact-text">
-                <h2>Let’s Talk About Your Space</h2>
-                <p>Tell us what you're looking for and we’ll connect with you shortly.</p>
-            </div>
+<!-- =================== SERVICES =================== -->
+<section id="services" class="section fade-in">
+  <h2 class="section-title">What We Do</h2>
 
-            <form action="https://formspree.io/f/yourFormID" method="POST" class="contact-form fade-in delay-1">
-                <input type="text" name="name" placeholder="Your Name" required />
-                <input type="email" name="email" placeholder="Your Email" required />
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="primary-btn">Send Message</button>
-            </form>
-        </div>
-    </section>
+  <div class="service-grid">
+    <div class="service-card">
+      <div class="img-box tall"></div>
+      <h3>Event Rental Management</h3>
+      <p>We connect groups, coordinators, and organizations to your space.</p>
+    </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>© 2025 Venyou Solutions. All Rights Reserved.</p>
-    </footer>
+    <div class="service-card">
+      <div class="img-box tall"></div>
+      <h3>Facility Oversight</h3>
+      <p>Daily operations, coordination, and proactive space management.</p>
+    </div>
 
+    <div class="service-card">
+      <div class="img-box tall"></div>
+      <h3>AVL & Production Support</h3>
+      <p>Professional lighting, sound, and stage support for your venue.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CONTACT =================== -->
+<section id="contact" class="section fade-in">
+  <h2 class="section-title">Let’s Talk About Your Space</h2>
+
+  <form class="contact-form" action="https://formspree.io/f/your-id-here" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Tell us about your space..." required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
