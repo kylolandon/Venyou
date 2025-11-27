@@ -5,7 +5,7 @@ body {
   font-family: "Archivo", sans-serif;
   color: white;
   background: #000;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 
 /* -------------------- Header -------------------- */
