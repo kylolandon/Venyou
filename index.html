@@ -1,104 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Venyou Solutions</title>
-  <meta name="description" content="Professional facility and AVL management services with a personal touch." />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venyou Solutions</title>
+
+    <!-- Google Font: Archivo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      Ven<span class="highlight">you</span> Solutions
-    </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section id="hero" class="hero-banner">
-      <div class="hero-overlay">
-        <h2>Facility & AVL Management</h2>
-        <p>Customized services built for your space</p>
-        <a href="#contact" class="button">Get in Touch</a>
-      </div>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">Venyou Solutions</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#process">Process</a>
+            <a href="#services">Services</a>
+            <a href="#contact" class="contact-btn">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="gradient-bg"></div>
+        <h1 class="fade-in">Your number one trusted facility management & event operations partner.</h1>
+        <p class="fade-in delay-1">Reliable oversight, seamless event coordination, and professional AVL support — all from one dedicated partner.</p>
+        <a href="#contact" class="primary-btn fade-in delay-2">Let’s Talk About Your Space</a>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about">
-      <h2>About Us</h2>
-      <p>Empowering businesses and organizations to thrive in the facilities they occupy through dependable, forward-thinking management and technology solutions. Our goal is to simplify operations, ensure reliability, and enhance how your space can function and perform.</p>
-    </section>
-
-    <!-- Core Service Areas Section -->
-    <section id="services">
-      <h2>Core Services</h2>
-
-      <div class="services-grid">
-
-        <div class="service">
-          <div class="service-img-box">
-            <img src="https://via.placeholder.com/400x200?text=Facility+Image" alt="Facility Management">
-          </div>
-          <h3>Facility Management Services</h3>
-          <ul>
-            <li>Smooth operations with proactive maintenance</li>
-            <li>Secure, connected facilities and vendors</li>
-            <li>Streamlined events and project oversight</li>
-          </ul>
+    <!-- ABOUT -->
+    <section id="about" class="about section">
+        <div class="content fade-in">
+            <div class="text">
+                <h2>About Venyou Solutions</h2>
+                <p>
+                    We help building owners, landlords, and organizations run their spaces with confidence.
+                    From day-to-day facility oversight to event rentals and AVL production, Venyou Solutions
+                    blends operational management with technical expertise to support your entire space.
+                </p>
+            </div>
+            <img src="https://via.placeholder.com/500x350" class="rounded-img fade-in delay-1" />
         </div>
+    </section>
 
-        <div class="service">
-          <div class="service-img-box">
-            <img src="https://via.placeholder.com/400x200?text=AVL+Image" alt="AVL Solutions">
-          </div>
-          <h3>AVL (Audio, Visual & Lighting) Solutions</h3>
-          <ul>
-            <li>Immersive sound, video, projection</li>
-            <li>Stage and architectural lighting integration</li>
-            <li>Ongoing support, maintenance, training</li>
-          </ul>
+    <!-- PROCESS -->
+    <section id="process" class="process section">
+        <h2 class="fade-in">Our Simple 3-Step Approach</h2>
+
+        <div class="process-cards">
+            <div class="card fade-in delay-1">
+                <h3>1. Visit & Review Your Space</h3>
+                <p>We meet onsite, evaluate how your building operates, and understand your workflow.</p>
+            </div>
+
+            <div class="card fade-in delay-2">
+                <h3>2. Identify Needs & Pain Points</h3>
+                <p>Together, we uncover gaps, inefficiencies, and opportunities for improvement.</p>
+            </div>
+
+            <div class="card fade-in delay-3">
+                <h3>3. Build a Service Plan</h3>
+                <p>A clear, structured plan that saves you time and increases long-term revenue.</p>
+            </div>
         </div>
-
-      </div>
     </section>
 
-    <!-- What Sets Us Apart Section -->
-    <section id="difference" class="image-banner">
-      <div class="overlay">
-        <h2>What Sets Us Apart</h2>
-        <ul>
-          <li>Local and dependable service coverage</li>
-          <li>Experienced in facility and AVL systems</li>
-          <li>Unified, tailored support for your facility and systems</li>
-        </ul>
-      </div>
+    <!-- SERVICES -->
+    <section id="services" class="services section">
+        <h2 class="fade-in">Services We Provide</h2>
+
+        <div class="service-list">
+            <div class="service fade-in delay-1">Facility Oversight & Operations</div>
+            <div class="service fade-in delay-2">Event Rental Coordination</div>
+            <div class="service fade-in delay-3">AVL Production Support</div>
+            <div class="service fade-in delay-4">Volunteer & Staff Tech Training</div>
+            <div class="service fade-in delay-5">Long-term Building Management</div>
+        </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>We’d love to connect! Use the form below or email us directly at:</p>
-      <p><a href="mailto:info@venyousolutions.com">info@venyousolutions.com</a></p>
+    <!-- CONTACT -->
+    <section id="contact" class="contact section">
+        <div class="contact-content fade-in">
+            <div class="contact-text">
+                <h2>Let’s Talk About Your Space</h2>
+                <p>Tell us what you're looking for and we’ll connect with you shortly.</p>
+            </div>
 
-      <form action="https://formspree.io/f/yourformid" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+            <form action="https://formspree.io/f/yourFormID" method="POST" class="contact-form fade-in delay-1">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="primary-btn">Send Message</button>
+            </form>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>© 2025 Venyou Solutions. All rights reserved.</p>
-  </footer>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 Venyou Solutions. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
