@@ -55,3 +55,30 @@ function cycleHeroText() {
 
 // rotate every 7 sec
 setInterval(cycleHeroText, 7000);
+
+// Fade-in elements
+const faders = document.querySelectorAll(".fade-in");
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) entry.target.classList.add("visible");
+  });
+});
+faders.forEach((el) => obs.observe(el));
+
+
+// Parallax background gradient
+window.addEventListener("scroll", () => {
+  const bg = document.querySelector(".bg-gradient");
+  if (bg) bg.style.transform = `translateY(${window.scrollY * 0.15}px)`;
+});
+
+
+// Mobile menu animation
+const btn = document.getElementById("menuBtn");
+const mobileNav = document.getElementById("mobileNav");
+
+btn.addEventListener("click", () => {
+  const isOpen = btn.classList.toggle("open");
+  mobileNav.style.display = isOpen ? "flex" : "none";
+});
+
