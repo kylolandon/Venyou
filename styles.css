@@ -1,138 +1,221 @@
 /* -------------------- Global -------------------- */
-* { margin:0; padding:0; box-sizing:border-box; } 
-
 body {
+  margin: 0;
   font-family: "Archivo", sans-serif;
+  background: #111;
   color: white;
-  background: #000;
-  overflow-x: hidden; 
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-/* -------------------- Header -------------------- */
-header.header {
-  width: 100%;
-  padding: 1.2rem 2rem;
+:root {
+  --blue: #56bcf9;
+  --white-soft: #ececec;
+}
+
+/* -------------------- Parallax Gradient -------------------- */
+.bg-gradient {
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(8px);
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at 50% 30%, #ffffff10, #000000 70%);
+  z-index: -1;
+  transform: translateY(0px);
+  will-change: transform;
+}
+
+/* -------------------- NAV -------------------- */
+.nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 22px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(20,20,20,0.4);
+  backdrop-filter: blur(20px);
+  z-index: 999;
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: white;
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-transform: lowercase;
 }
-.logo span { color: #56bcf9; }
 
-nav.desktop-nav a {
-  margin-left: 2rem;
-  color: white;
+.logo span {
+  font-weight: 300;
+  margin-left: 2px;
+  color: var(--blue);
+}
+
+.nav-links a {
+  margin-left: 20px;
   text-decoration: none;
-  font-weight: 500;
-}
-.contact-btn {
-  padding: 8px 18px;
-  border-radius: 6px;
-  background: #56bcf9;
+  color: var(--white-soft);
+  font-weight: 300;
 }
 
-/* Mobile Menu */
-#menuBtn {
-  display: none;
-  cursor: pointer;
+.nav-links .cta {
+  color: var(--blue);
 }
-#menuBtn div {
-  width: 28px; height: 3px; background: white; margin: 5px 0; transition: 0.4s;
-}
-#menuBtn.open .bar1 { transform: rotate(45deg) translate(5px,5px);}
-#menuBtn.open .bar2 { opacity:0;}
-#menuBtn.open .bar3 { transform: rotate(-45deg) translate(6px,-6px);}
-#mobileNav {
+
+/* -------------------- MOBILE MENU -------------------- */
+.mobile-menu-btn {
   display: none;
   flex-direction: column;
-  position: fixed;
-  top:0; right:0;
-  height:100vh;
-  width:70vw;
-  background:#111;
-  justify-content:center;
-  gap:2rem;
-  padding:2rem;
-  z-index:999;
-}
-#mobileNav a { color:white; text-decoration:none; font-size:1.5rem; }
-
-@media(max-width:850px){
-  nav.desktop-nav { display:none; }
-  #menuBtn { display:block; }
+  gap: 5px;
+  cursor: pointer;
 }
 
-/* -------------------- Hero -------------------- */
+.mobile-menu-btn .bar {
+  width: 26px;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  background: rgba(30,30,30,0.7);
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+/* -------------------- HERO -------------------- */
 .hero {
-  position: relative;
-  height: 100vh;
+  padding-top: 180px;
+  padding-bottom: 160px;
   text-align: center;
-  padding-top: 140px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-}
-.bg-gradient {
-  position:absolute; top:0; left:0;
-  width:100%; height:130%;
-  background: radial-gradient(circle at center, #222 0%, #000 70%);
-  z-index:-1;
-  transform:translateY(0);
+  position: relative;
+  min-height: 400px;
 }
 
-/* Hero sets */
-.hero-set { 
-  position:absolute; top:50%; left:50%;
-  transform:translate(-50%,-50%);
-  opacity:0;
+.hero-title {
+  font-size: 4rem;
+  font-weight: 200;
+  letter-spacing: -2px;
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity 1s, transform 1s;
 }
-.hero-set.active { 
-  opacity:1; 
-  transform:translate(-50%,-50%); 
-}
-.hero-title { font-weight:700; font-size:3rem; margin-bottom:1rem; }
-.hero-sub { font-weight:300; font-size:1.3rem; }
 
-/* Hero button */
-.primary-btn {
-  margin-top:20px;
-  padding:12px 26px;
-  border-radius:8px;
-  text-decoration:none;
-  background:#56bcf9;
-  color:white;
-  font-weight:500;
+.hero-sub {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: var(--white-soft);
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s, transform 1s;
 }
 
-/* -------------------- Sections -------------------- */
-.section { padding:100px 20px; max-width:1200px; margin:auto; }
-.about-content { display:flex; flex-wrap:wrap; gap:2rem; align-items:center; justify-content:center; }
-.rounded-img { border-radius:16px; width:100%; max-width:600px; height:auto; }
+/* -------------------- SECTIONS -------------------- */
+.section {
+  padding: 120px 40px;
+  text-align: center;
+}
 
-/* Services */
-.service-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:2rem; }
-.service-card { text-align:center; background:#111; padding:2rem; border-radius:12px; }
-.service-card img { width:100%; height:180px; object-fit:cover; border-radius:10px; }
+.section-title {
+  font-weight: 200;
+  font-size: 2.4rem;
+}
 
-/* Fade-in */
-.fade-in { opacity:0; transform:translateY(20px); transition:0.8s ease; }
-.fade-in.visible { opacity:1; transform:translateY(0); }
+/* -------------------- IMAGES -------------------- */
+.img-box {
+  background: #222;
+  border-radius: 18px;
+  height: 200px;
+  width: 300px;
+}
 
-/* Footer */
-.footer { text-align:center; padding:2rem; color:#777; }
+.img-box.tall {
+  height: 260px;
+}
 
-/* Smooth scrolling helper */
-html { scroll-behavior: smooth; }
+.image-row {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.service-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.service-card {
+  width: 300px;
+}
+
+/* -------------------- CONTACT FORM (GLASS EFFECT) -------------------- */
+.contact-form {
+  max-width: 450px;
+  margin: 50px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(255,255,255,0.06);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.12);
+  color: white;
+}
+
+.contact-form button {
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: var(--blue);
+  color: #000;
+  cursor: pointer;
+}
+
+/* -------------------- FADE IN -------------------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+
+  .mobile-menu-btn { display: flex; }
+
+  .hero-title { font-size: 3rem; }
+
+  .img-box { width: 100%; }
+}
