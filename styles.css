@@ -1,211 +1,165 @@
-/* -------------------- Global -------------------- *//* GLOBAL */
+/* -------------------- Global -------------------- */
 body {
-  margin: 0;
-  font-family: "Archivo", sans-serif;
-  background: #111;
-  color: white;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+    margin: 0;
+    font-family: "Archivo", sans-serif;
+    color: #222;
+    background: #fff;
+    overflow-x: hidden;
 }
 
-:root {
-  --blue: #56bcf9;
-  --white-soft: #ececec;
+h1, h2, h3 {
+    font-weight: 300;
+    letter-spacing: -0.5px;
 }
 
-/* PARALLAX GRADIENT */
-.bg-gradient {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: radial-gradient(circle at 50% 30%, #ffffff10, #000000 70%);
-  z-index: -1;
-  transform: translateY(0px);
-  will-change: transform;
+/* -------------------- Header -------------------- */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(14px);
+    background: rgba(255,255,255,0.3);
+    z-index: 10;
 }
 
-/* NAV */
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 22px 40px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: rgba(20,20,20,0.4);
-  backdrop-filter: blur(20px);
-  z-index: 999;
+.header a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #222;
+    font-weight: 400;
 }
 
-.logo {
-  font-size: 1.4rem;
-  font-weight: 900;
-  letter-spacing: -1px;
+.contact-btn {
+    padding: 8px 18px;
+    border-radius: 6px;
+    background: #56bcf9;
+    color: white !important;
 }
 
-.logo span {
-  font-weight: 300;
-  margin-left: 6px;
-  color: var(--blue);
-}
-
-.nav-links a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: var(--white-soft);
-  font-weight: 300;
-}
-
-.nav-links .cta {
-  color: var(--blue);
-}
-
-/* MOBILE MENU */
-.mobile-menu-btn {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.mobile-menu-btn .bar {
-  width: 26px;
-  height: 2px;
-  background: white;
-  transition: 0.3s;
-}
-
-.mobile-nav {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 70px;
-  right: 40px;
-  background: rgba(30,30,30,0.7);
-  backdrop-filter: blur(15px);
-  padding: 20px;
-  border-radius: 12px;
-}
-
-.mobile-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 0;
-}
-
-/* HERO */
+/* -------------------- Hero -------------------- */
 .hero {
-  padding-top: 180px;
-  padding-bottom: 160px;
-  text-align: center;
+    text-align: center;
+    padding: 200px 20px 150px;
+    position: relative;
 }
 
-.hero-title {
-  font-size: 4rem;
-  font-weight: 200;
-  letter-spacing: -2px;
+.gradient-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, #eeeeee, #dcdcdc, #ffffff);
+    z-index: -1;
 }
 
-.hero-sub {
-  margin-top: 20px;
-  font-size: 1.2rem;
-  color: var(--white-soft);
+.primary-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 26px;
+    background: #56bcf9;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-/* SECTIONS */
+/* -------------------- Sections -------------------- */
 .section {
-  padding: 120px 40px;
-  text-align: center;
+    padding: 120px 40px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.section-title {
-  font-weight: 200;
-  font-size: 2.4rem;
+.about .content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
 }
 
-/* IMAGES */
-.img-box {
-  background: #222;
-  border-radius: 18px;
-  height: 200px;
+.rounded-img {
+    width: 45%;
+    border-radius: 18px;
 }
 
-.img-box.tall {
-  height: 260px;
+/* -------------------- Process -------------------- */
+.process-cards {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
 }
 
-.image-row {
-  display: flex;
-  gap: 20px;
-  margin-top: 40px;
-  justify-content: center;
+.card {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 14px;
+    flex: 1;
 }
 
-.service-grid {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 50px;
+/* -------------------- Services -------------------- */
+.services {
+    background: #111;
+    color: white;
+    text-align: center;
 }
 
-.service-card {
-  width: 300px;
+.service-list {
+    margin-top: 40px;
 }
 
-/* CONTACT FORM (GLASS) */
-.contact-form {
-  max-width: 450px;
-  margin: 50px auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background: rgba(255,255,255,0.06);
-  padding: 30px;
-  border-radius: 20px;
-  backdrop-filter: blur(20px);
+.service {
+    margin: 14px auto;
+    padding: 18px;
+    max-width: 480px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+}
+
+/* -------------------- Contact -------------------- */
+.contact-content {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 14px;
-  border: none;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.12);
-  color: white;
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: inherit;
 }
 
 .contact-form button {
-  padding: 14px;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  background: var(--blue);
-  color: #000;
-  cursor: pointer;
+    width: 100%;
 }
 
-/* FADE IN */
+/* -------------------- Footer -------------------- */
+.footer {
+    padding: 30px;
+    text-align: center;
+    color: #777;
+}
+
+/* -------------------- Fade Animations -------------------- */
 .fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 1s ease;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 0.9s ease forwards;
 }
 
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1.0s; }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .nav-links { display: none; }
-
-  .mobile-menu-btn {
-    display: flex;
-  }
-
-  .hero-title { font-size: 3rem; }
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
