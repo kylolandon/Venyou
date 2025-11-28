@@ -5,7 +5,228 @@ body {
   background: #111;
   color: white;
   overflow-x: hidden;
+  scroll-behavior: smooth; /* -------------------- Global -------------------- */
+body {
+  margin: 0;
+  font-family: "Archivo", sans-serif; 
+  background: #111;
+  color: white;
+  overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+:root {
+  --blue: #56bcf9;
+  --white-soft: #ececec;
+}
+
+/* -------------------- Parallax Gradient -------------------- */
+.bg-gradient {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at 50% 30%, #ffffff10, #000000 70%);
+  z-index: -1;
+  transform: translateY(0px);
+  will-change: transform;
+}
+
+/* -------------------- NAV -------------------- */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(20,20,20,0.4);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: 800;
+  /* letter-spacing: -1px; */
+  text-transform: lowercase;
+}
+
+.logo span {
+  font-weight: 800;
+  margin-left: 1px;
+  color: var(--blue);
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--white-soft);
+  font-weight: 300;
+}
+
+.nav-links .cta {
+  color: var(--blue);
+}
+
+/* -------------------- MOBILE MENU -------------------- */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.mobile-menu-btn .bar {
+  width: 26px;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  background: rgba(30,30,30,0.7);
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+/* -------------------- HERO -------------------- */
+.hero {
+  padding-top: 180px;
+  padding-bottom: 160px;
+  text-align: center;
+  position: relative;
+  min-height: 400px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 200;
+  letter-spacing: -2px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s, transform 1s;
+}
+
+.hero-sub {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: var(--white-soft);
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s, transform 1s;
+}
+
+/* -------------------- SECTIONS -------------------- */
+.section {
+  padding: 120px 40px;
+  text-align: center;
+}
+
+.section-title {
+  font-weight: 200;
+  font-size: 2.4rem;
+}
+
+/* -------------------- IMAGES -------------------- */
+.img-box {
+  background: #222;
+  border-radius: 18px;
+  height: 200px;
+  width: 300px;
+}
+
+.img-box.tall {
+  height: 260px;
+}
+
+.image-row {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.service-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.service-card {
+  width: 300px;
+}
+
+/* -------------------- CONTACT FORM (GLASS EFFECT) -------------------- */
+.contact-form {
+  max-width: 450px;
+  margin: 50px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(255,255,255,0.06);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.12);
+  color: white;
+}
+
+.contact-form button {
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: var(--blue);
+  color: #000;
+  cursor: pointer;
+}
+
+/* -------------------- FADE IN -------------------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+
+  .mobile-menu-btn { display: flex; }
+
+  .hero-title { font-size: 3rem; }
+
+  .img-box { width: 100%; }
+}
+
 }
 
 :root {
