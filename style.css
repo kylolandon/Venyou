@@ -4,12 +4,12 @@
 html, body {
   height: 100%;
   font-family: "Archivo", sans-serif;
-  background: linear-gradient(180deg, #403e3e 0%, #111111 40%);
-  color: #fff;
+  background: radial-gradient(#242424 0%, #000000 50%);  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  width: 100%;
 }
 
 /* Container */
