@@ -4,7 +4,7 @@
 html, body {
   height: 100%;
   font-family: "Archivo", sans-serif;
-  background: linear-gradient(180deg, #141414 0%, #111111 100%);  display: flex;
+  background: linear-gradient(180deg, #141414 0%, #111111 50%);  display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
