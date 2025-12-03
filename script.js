@@ -1,18 +1,16 @@
-// wrap each letter in a span for animation
-const logo = document.getElementById('logo');
-const text = logo.textContent;
-logo.textContent = ''; // clear original text
+const logoMain = document.getElementById('logo-main');
+const text = logoMain.textContent;
+logoMain.textContent = ''; // clear original text
 
-text.split('').forEach(char => {
+text.split('').forEach((char, index) => {
   const span = document.createElement('span');
   span.textContent = char;
   span.classList.add('letter');
 
   // color "you" letters in blue
-  if (char.toLowerCase() === 'y' || char.toLowerCase() === 'o' || char.toLowerCase() === 'u') {
-    span.classList.add('blue');
-  } else if (char !== ' ') {
-    span.classList.add('white');
-  }
-  logo.appendChild(span);
+  if (index >= 3) span.classList.add('logo-you'); // "you" is letters 3,4,5
+  logoMain.appendChild(span);
+
+  // stagger animation delays
+  span.style.animationDelay = `${index * 0.1}s`;
 });
