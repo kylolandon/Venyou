@@ -28,7 +28,7 @@ body {
   transform: translateY(20px);
   color: #56bcf9;
   animation: fadeUp 1s forwards;
-}
+} 
 
 /* stagger each letter */
 .letter:nth-child(1) { animation-delay: 0s; }
