@@ -1,4 +1,4 @@
-const logoMain = document.getElementById('logo-main');
+const logoMain = document.getElementById('logo-main'); 
 const text = logoMain.textContent;
 logoMain.textContent = ''; // clear original text
 
