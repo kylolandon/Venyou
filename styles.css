@@ -1,37 +1,54 @@
-<link rel="stylesheet" href="style.css">
-/* Global */
-* { margin: 0; padding: 0; box-sizing: border-box; } 
-body, html { height: 100%; font-family: "Archivo", sans-serif; background: #000; color: #fff; overflow: hidden; }
+/* ==============================
+   Global Styles
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Black gradient background */
-body {
+html, body {
+  height: 100%;
+  font-family: "Archivo", sans-serif;
   background: linear-gradient(180deg, #000000 0%, #111111 100%);
-  display: flex; 
+  color: #fff;
+  overflow: hidden;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Container */
+/* ==============================
+   Container
+============================== */
 .coming-soon-container {
   text-align: center;
+  padding: 0 20px;
 }
 
-/* Logo letters */
+/* ==============================
+   Logo
+============================== */
 .logo {
   font-size: 3rem;
   font-weight: 800;
   display: inline-block;
+  line-height: 1.1;
 }
 
 .letter {
   display: inline-block;
   opacity: 0;
   transform: translateY(20px);
-  color: #56bcf9;
   animation: fadeUp 1s forwards;
-} 
+}
 
-/* stagger each letter */
+.letter.blue { color: #56bcf9; }   /* branded blue */
+.letter.white { color: #fff; }     /* default white */
+
+/* ==============================
+   Stagger animation delays
+============================== */
 .letter:nth-child(1) { animation-delay: 0s; }
 .letter:nth-child(2) { animation-delay: 0.1s; }
 .letter:nth-child(3) { animation-delay: 0.2s; }
@@ -50,6 +67,19 @@ body {
 .letter:nth-child(16){ animation-delay: 1.5s; }
 .letter:nth-child(17){ animation-delay: 1.6s; }
 
+/* ==============================
+   Fade-up Animation
+============================== */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==============================
+   Subtext
+============================== */
 .sub-text {
   margin-top: 20px;
   font-size: 1.2rem;
@@ -58,7 +88,15 @@ body {
   opacity: 0.7;
 }
 
-/* Letter fade up animation */
-@keyframes fadeUp {
-  to { opacity: 1; transform: translateY(0); }
+/* ==============================
+   Responsive
+============================== */
+@media (max-width: 600px) {
+  .logo {
+    font-size: 2rem;
+  }
+  
+  .sub-text {
+    font-size: 1rem;
+  }
 }
