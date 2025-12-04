@@ -1,13 +1,3 @@
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QSSKJDN62M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QSSKJDN62M');
-</script>
-  
 const logoMain = document.getElementById('logo-main'); 
 const text = logoMain.textContent;
 logoMain.textContent = ''; // clear original text
